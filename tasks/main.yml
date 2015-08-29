@@ -4,9 +4,9 @@
   when: ansible_pkg_mgr == 'apt'
 
 - name: update yum packages
-  yum: yum: name=* state=latest update_cache=yes
+  yum: name=* state=latest update_cache=yes
   when: ansible_pkg_mgr == 'yum'
 
 - name: update zypper packages
-  yum: zypper: name=* state=latest
+  zypper: name=* state=latest
   when: ansible_pkg_mgr == 'zypper'
