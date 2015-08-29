@@ -1,28 +1,19 @@
-Linux-Updater
-=========
+# Ansible Role: Linux-Updater
+[![Build Status](https://travis-ci.org/smiller171/ansible-linux-updates.svg)](https://travis-ci.org/smiller171/ansible-linux-updates)
 
 Updates all packages for most Linux distributions
 
-Role Variables
---------------
-
+## Role Variables
 None
 
-Dependencies
-------------
-
+## Dependencies
 None
 
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
+## Example Playbook
+    ---
     - hosts: all
       roles:
          - scott.miller171.linux_updater
 
-License
--------
-
+## License
 MIT
