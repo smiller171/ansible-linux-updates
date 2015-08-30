@@ -2,7 +2,8 @@ FROM scottmiller171/debian-ansible
 
 MAINTAINER scott.miller171@gmail.com
 
-COPY . .
+COPY . /ansible-linux-updates
+WORKDIR /ansible-linux-updates
 RUN { echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg
 RUN ansible-playbook -i tests/inventory tests/test.yml
 RUN "ansible-playbook -i tests/inventory tests/test.yml
