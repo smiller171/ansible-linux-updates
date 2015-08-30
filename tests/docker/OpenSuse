@@ -1,0 +1,12 @@
+FROM scottmiller171/opensuse-ansible
+
+MAINTAINER scott.miller171@gmail.com
+
+COPY . /root/ansible-linux-updates
+WORKDIR /root/ansible-linux-updates
+RUN { echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg
+RUN ansible-playbook -c local -i tests/inventory tests/test.yml
+RUN ansible-playbook -c local -i tests/inventory tests/test.yml \
+    | grep -q 'changed=0.*failed=0' \
+    && (echo 'Idempotence test: pass' && exit 0) \
+    || (echo 'Idempotence test: fail' && exit 1)

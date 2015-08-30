@@ -1,6 +1,7 @@
 ---
 sudo: required
-
+services:
+  - docker
 branches:
   only:
     - master
@@ -8,8 +9,6 @@ language: python
 python: "2.7"
 
 install:
-# Remove postgres
-- sudo apt-get purge postgresql*
 # Install Ansible.
 - pip install ansible
 
@@ -20,12 +19,8 @@ script:
 # Check the role/playbook's syntax.
 - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
 
-# Run the role/playbook with ansible-playbook.
-- "ansible-playbook -i tests/inventory tests/test.yml"
-
-# Run the role/playbook again, checking to make sure it's idempotent.
-- >
-  ansible-playbook -i tests/inventory tests/test.yml
-  | grep -q 'changed=0.*failed=0'
-  && (echo 'Idempotence test: pass' && exit 0)
-  || (echo 'Idempotence test: fail' && exit 1)
+# Check Playbook and idempotency on different platforms
+- docker build -f tests/docker/Ubuntu .
+- docker build -f tests/docker/Debian .
+- docker build -f tests/docker/Centos .
+- docker build -f tests/docker/OpenSuse .
