@@ -4,6 +4,8 @@ MAINTAINER scott.miller171@gmail.com
 
 COPY . .
 RUN { echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg
+RUN ls -la
+RUN less ansible.cfg
 RUN ansible-playbook -i tests/inventory tests/test.yml
 RUN "ansible-playbook -i tests/inventory tests/test.yml
 | grep -q 'changed=0.*failed=0'
