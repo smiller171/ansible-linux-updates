@@ -2,8 +2,7 @@ FROM scottmiller171/centos-ansible
 
 MAINTAINER scott.miller171@gmail.com
 
-COPY . /usr/local/ansible-linux-updates
-WORKDIR /usr/local/ansible-linux-updates
+COPY . .
 RUN { echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg
 RUN ansible-playbook -i tests/inventory tests/test.yml
 RUN "ansible-playbook -i tests/inventory tests/test.yml
