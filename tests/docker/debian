@@ -1,4 +1,4 @@
-FROM scottmiller171/debian-ansible
+FROM scottmiller171/ansible-docker-images:debian
 
 MAINTAINER scott.miller171@gmail.com
 

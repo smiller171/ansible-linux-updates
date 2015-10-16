@@ -1,4 +1,4 @@
-FROM scottmiller171/ubuntu-ansible
+FROM scottmiller171/ansible-docker-images:ubuntu
 
 MAINTAINER scott.miller171@gmail.com
 

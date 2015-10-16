@@ -1,4 +1,4 @@
-FROM scottmiller171/opensuse-ansible
+FROM scottmiller171/ansible-docker-images:opensuse
 
 MAINTAINER scott.miller171@gmail.com
 

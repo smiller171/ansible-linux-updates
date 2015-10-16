@@ -1,4 +1,4 @@
-FROM scottmiller171/centos-ansible
+FROM scottmiller171/ansible-docker-images:centos
 
 MAINTAINER scott.miller171@gmail.com
 
