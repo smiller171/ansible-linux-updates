@@ -10,3 +10,6 @@
 - name: update zypper packages
   zypper: name=* state=latest
   when: ansible_pkg_mgr == 'zypper'
+
+- fail: msg="No supported package manager detected"
+  when: ansible_pkg_mgr != 'zypper' and ansible_pkg_mgr != 'apt' and ansible_pkg_mgr != 'yum'
