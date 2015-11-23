@@ -35,5 +35,5 @@ script:
 - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
 
 # Check Playbook and idempotency on different platforms
-- ansible-playbook -i tests/template.yml -e "path=`pwd` distro=$DISTRO"
+- ansible-playbook -i tests/inventory tests/template.yml -e "path=`pwd` distro=$DISTRO"
 - docker build -f Dockerfile .
