@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - template:
+      src: tests/Dockerfile.j2
+      dest: "{{path}}/Dockerfile"
