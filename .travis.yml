@@ -22,7 +22,6 @@ env:
   - DISTRO=debian
   - DISTRO=centos
   - DISTRO=opensuse
-  - DISTRO=alpine
 
 install:
 # Install Ansible.
