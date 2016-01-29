@@ -15,9 +15,6 @@ galaxy_info:
   - name: Fedora
     versions:
     - all
-  - name: opensuse
-    versions:
-    - all
   - name: Amazon
     versions:
     - all
@@ -26,7 +23,8 @@ galaxy_info:
     - all
   - name: SLES
     versions:
-    - all
+    - 6
+    - 7
   - name: GenericLinux
     versions:
     - all
