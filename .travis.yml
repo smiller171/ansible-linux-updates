@@ -30,10 +30,8 @@ env:
   - DISTRO=debian-wheezy
   - DISTRO=debian-stable
   - DISTRO=centos
-  - DISTRO=centos-5
   - DISTRO=centos-6
   - DISTRO=centos-7
-  - DISTRO=opensuse
 
 install:
 # Install Ansible.
