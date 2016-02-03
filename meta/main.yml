@@ -8,7 +8,8 @@ galaxy_info:
   platforms:
   - name: EL
     versions:
-    - all
+    - 6
+    - 7
   - name: GenericUNIX
     versions:
     - all
@@ -21,10 +22,6 @@ galaxy_info:
   - name: Ubuntu
     versions:
     - all
-  - name: SLES
-    versions:
-    - 6
-    - 7
   - name: GenericLinux
     versions:
     - all
