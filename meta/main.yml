@@ -29,7 +29,7 @@ galaxy_info:
     versions:
     - all
 
-  tags:
+  galaxy_tags:
   - packaging
   - system
 dependencies: []
