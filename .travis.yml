@@ -19,19 +19,14 @@ notifications:
     on_start: never     # options: [always|never|change] default: always
 
 env:
-  - DISTRO=ubuntu
-  - DISTRO=ubuntu-12.04
-  - DISTRO=ubuntu-14.04
-  - DISTRO=ubuntu-15.04
-  - DISTRO=ubuntu-15.10
-  - DISTRO=debian
-  - DISTRO=debian-jessie
-  - DISTRO=debian-squeeze
-  - DISTRO=debian-wheezy
-  - DISTRO=debian-stable
-  - DISTRO=centos
-  - DISTRO=centos-6
-  - DISTRO=centos-7
+  - DISTRO=ubuntu1604
+  - DISTRO=ubuntu1604py3
+  - DISTRO=ubuntu1404
+  - DISTRO=ubuntu1204
+  - DISTRO=fedora23
+  - DISTRO=fedora-rawhide
+  - DISTRO=centos7
+  - DISTRO=centos6
 
 install:
 # Install Ansible.
